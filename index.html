@@ -8,47 +8,52 @@
     <title>Biglietto treno form</title>
 </head>
 <body>
-    <section>
-        <h2 class="m-10">Inserisci i dati del tuo viaggio:</h2>
-        <div class="m-10">
-            <label for="input-name">Nome Passeggero</label>
-            <input type="text" id="input-name">
-        </div>
-        <div class="m-10">
-            <label for="kms">Distanza percorso in Kms</label>
-            <input type="number" id="kms" value="10" min="10">
-        </div>
-        <div class="m-10">
-            <label for="age">Fascia d'età</label>
-            <select id="age">
-                <option value="min">Minorenne</option>
-                <option value="maj" selected>Maggiorenne</option>
-                <option value="over65">Over 65</option>
-            </select>
-        </div>
-        <div class="m-10">
-            <button id="ticket-generator" >Genera Biglietto</button>
-        </div>
-    </section>
-    <hr>
-    <section>
-        <h2 class="m-10">Il tuo biglietto</h2>
-        <div class="m-10">
-            <h3>Nome Passeggero: <span id="passenger-name"></span></h3>
-        </div>
-        <div class="m-10">
-            <h3>Offerta: <span id="ticket-plan"></span></h3>
-        </div>
-        <div class="m-10">
-            <h3>Carrozza: <span id="car"></span></h3>
-        </div>
-        <div class="m-10">
-            <h3>Codice treno: <span id="train-number"></span></h3>
-        </div>
-        <div class="m-10">
-            <h3>Prezzo biglietto: <span id="ticket-price"></span></h3>
+    <section id="user-field">
+        <h2 class="mt-10 text-center">Inserisci i dati del tuo viaggio</h2>
+        <div class="container">
+            <div class="d-flex">
+                <div>
+                    <label for="input-name">Nome Passeggero</label>
+                    <input type="text" id="input-name">
+                </div>
+                <div>
+                    <label for="kms">Distanza percorso in Kms</label>
+                    <input type="number" id="kms" value="10" min="10">
+                </div>
+                <div>
+                    <label for="age">Fascia d'età</label>
+                    <select id="age">
+                        <option value="min">Minorenne</option>
+                        <option value="maj" selected>Maggiorenne</option>
+                        <option value="over65">Over 65</option>
+                    </select>
+                </div>
+            </div>
+            <div class="text-center">
+                <button id="ticket-generator">Genera Biglietto</button>
+            </div>
         </div>
     </section>
+    <section id="ticket-field">
+        <h2 class="mt-10 text-center">Il tuo biglietto</h2>
+        <div class="container">
+            <div class="m-10">
+                <h3>Nome Passeggero: <span id="passenger-name"></span></h3>
+            </div>
+            <div class="m-10">
+                <h3>Offerta: <span id="ticket-plan"></span></h3>
+            </div>
+            <div class="m-10">
+                <h3>Carrozza: <span id="car"></span> </h3>
+            </div>
+            <div class="m-10">
+                <h3>Codice treno: <span id="train-number"></span></h3>
+            </div>
+            <div class="m-10">
+                <h3>Prezzo biglietto: <span id="ticket-price"></span></h3>
+            </div>
+        </section>
+    </div>
     <script src="./js/script.js"></script>
 </body>
 </html>
