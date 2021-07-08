@@ -25,3 +25,38 @@ var train = document.getElementById("train-number");
 var price = document.getElementById("ticket-price");
 var generateTicket = document.getElementById("ticket-generator");
 
+//Stampare biglietto
+generateTicket.addEventListener("click", function(){
+
+    //Stampare nome passeggero
+    ticketName.innerHTML = passengerName.value;
+
+    //Calcolare il prezzo secondo la tariffa ordinaria
+    var tempPrice = km.value * 0.21;
+    var plan = "Tariffa ordinaria"; 
+
+    //Definire sconti
+    var ageValue = age.value;
+    if (ageValue === "min") {
+        tempPrice *= 0.8;
+        plan = "Tariffa minori";
+    } else if (ageValue === "over65") {
+        tempPrice *= 0.6; 
+        plan = "Tariffa over 65";
+    } 
+
+    //Prezzo definitivo in due decimali
+    var ticketPrice = tempPrice.toFixed(2);
+    price.innerHTML = "€ " + ticketPrice;
+
+    //Stampare tariffa applicata
+    ticketPlan.innerHTML = plan;
+    
+    //Ramdomizzare carrozza e stampare
+    var carRandom = Math.floor(Math.random() * 10) + 1;
+    car.innerHTML = carRandom;
+
+    //Stampare codice treno
+    train.innerHTML = "5678";
+}
+)
