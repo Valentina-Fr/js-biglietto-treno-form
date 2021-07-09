@@ -16,6 +16,7 @@ Tariffa applicata all'utente (Tariffa minori, Tariffa ordinaria, Tariffa Over65)
 var passengerName = document.getElementById("input-name");
 var km = document.getElementById("kms");
 var age = document.getElementById("age");
+var reset = document.getElementById("reset");
 
 //Recuperare elementi campo ticket
 var ticketName = document.getElementById("passenger-name");
@@ -65,3 +66,12 @@ generateTicket.addEventListener("click", function(){
     ticket.classList.remove("hidden");
 }
 )
+
+//Button reset
+reset.addEventListener("click", function(){
+    passengerName.value = "";
+    km.value = "10";
+    age.value = "maj"
+
+    ticket.classList.add("hidden");
+})
