@@ -56,7 +56,8 @@ generateTicket.addEventListener("click", function(){
     var carRandom = Math.floor(Math.random() * 10) + 1;
     car.innerHTML = carRandom;
 
-    //Stampare codice treno
-    train.innerHTML = "5678";
+    //Randomizzare codice treno
+    var trainRandom = Math.floor(Math.random() * (10000 - 9000)) + 9000;
+    train.innerHTML = trainRandom;
 }
 )
