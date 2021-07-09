@@ -8,19 +8,19 @@
     <title>Biglietto treno form</title>
 </head>
 <body>
-    <section id="user-field">
-        <h2 class="mt-10 text-center">Inserisci i dati del tuo viaggio</h2>
+    <section id="user-field" class="text-center">
+        <h2 class="mt-10">Inserisci i dati del tuo viaggio</h2>
         <div class="container">
-            <div class="d-flex">
-                <div>
+            <div class="row">
+                <div class="col mt-10">
                     <label for="input-name">Nome Passeggero</label>
                     <input type="text" id="input-name">
-                </div>
-                <div>
-                    <label for="kms">Distanza percorso in Kms</label>
+                </div class="col">
+                <div class="col mt-10">
+                    <label for="kms">Km da percorrere</label>
                     <input type="number" id="kms" value="10" min="10">
                 </div>
-                <div>
+                <div class="col mt-10">
                     <label for="age">Fascia d'età</label>
                     <select id="age">
                         <option value="min">Minorenne</option>
@@ -29,11 +29,10 @@
                     </select>
                 </div>
             </div>
-            <div class="text-center">
-                <button id="ticket-generator">Genera Biglietto</button>
-            </div>
+            <button id="ticket-generator">Genera Biglietto</button>
         </div>
     </section>
+
     <section id="ticket-field">
         <h2 class="mt-10 text-center">Il tuo biglietto</h2>
         <div class="container">
@@ -52,8 +51,9 @@
             <div class="m-10">
                 <h3>Prezzo biglietto: <span id="ticket-price"></span></h3>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
     <script src="./js/script.js"></script>
 </body>
 </html>

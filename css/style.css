@@ -6,7 +6,6 @@
 }
 
 /* General Styles */
-
 body {
     background-color: #b91450;
 }
@@ -30,37 +29,40 @@ h2 {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 90%;
     margin: 20px auto;
+    padding: 15px;
     background-color: white;
     border-radius: 15px;
-    padding: 15px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
 }
 
-.d-flex {
+.row {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: 100%;
 }
 
 /* User Field */
-
 label {
     display: block;
-    text-align: center;
     color: #b91450;
 }
 
 input, select {
-    width: 200px;
+    width: 80%;
     border-radius: 3px;
     border: 1px solid #b91450;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
 }
 
 button {
+    text-align: center;
     color: #b91450;
     font-size: 16px;
     margin-top: 20px;
@@ -68,11 +70,27 @@ button {
 }
 
 /* Ticket field */
-
 #ticket-field h3{
     display: inline-block;
 }
 
 #ticket-field h3 span {
     font-weight: 200;
+}
+
+/* Responsive */
+@media screen and (min-width: 576px) {
+    .container {
+        max-width: 80%;
+    }
+    
+    .col {
+        width: calc(100% / 3);
+    }  
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 60%;
+    }
 }
