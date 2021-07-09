@@ -24,6 +24,7 @@ var car = document.getElementById("car");
 var train = document.getElementById("train-number");
 var price = document.getElementById("ticket-price");
 var generateTicket = document.getElementById("ticket-generator");
+var ticket = document.getElementById("ticket-field");
 
 //Stampare biglietto
 generateTicket.addEventListener("click", function(){
@@ -52,12 +53,15 @@ generateTicket.addEventListener("click", function(){
     //Stampare tariffa applicata
     ticketPlan.innerHTML = plan;
     
-    //Ramdomizzare carrozza e stampare
+    //Ramdomizzare carrozza
     var carRandom = Math.floor(Math.random() * 10) + 1;
     car.innerHTML = carRandom;
 
     //Randomizzare codice treno
     var trainRandom = Math.floor(Math.random() * (10000 - 9000)) + 9000;
     train.innerHTML = trainRandom;
+
+    //Emettere biglietto
+    ticket.classList.remove("hidden");
 }
 )
